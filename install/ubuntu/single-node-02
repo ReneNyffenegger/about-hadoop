@@ -1,0 +1,11 @@
+# vi: ft=sh
+
+if [[ $(id -un) != hduser ]]; then
+  echo log in as hduser
+  return
+fi
+
+. scripts/configure-ssh
+. scripts/format-namenode
+. scripts/start-hadoop-daemons
+. scripts/verify-hadoop-daemons

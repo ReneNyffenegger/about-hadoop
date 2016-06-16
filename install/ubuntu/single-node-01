@@ -1,0 +1,28 @@
+#           http://pingax.com/install-hadoop2-6-0-on-ubuntu/
+#
+# TODO
+#  see also http://pingax.com/install-apache-hadoop-ubuntu-cluster-setup/
+#           http://www.bogotobogo.com/Hadoop/BigData_hadoop_Install_on_ubuntu_single_node_cluster.php
+
+if ! command -v java > /dev/null; then
+   echo "java does not seem to be installed."
+   return
+fi
+
+java -version
+
+. scripts/get-java
+. scripts/create-hduser
+. scripts/download-hadoop
+. scripts/temp-directories-for-namenode-and-datanode
+. scripts/get-ssh
+. scripts/confiuration_xmls
+
+
+echo ""
+echo "Make sure to disable IPv6"
+echo ""
+echo Change user to hduser
+echo . single-node-02
+echo ""
+sudo su hduser

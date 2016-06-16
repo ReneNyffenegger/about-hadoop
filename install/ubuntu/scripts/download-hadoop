@@ -1,0 +1,4 @@
+wget http://mirror.switch.ch/mirror/apache/dist/hadoop/common/hadoop-2.6.4/hadoop-2.6.4.tar.gz -O hadoop.tar.gz
+sudo tar -xzvf hadoop.tar.gz 
+sudo mv hadoop-2.6.4 /usr/local/hadoop
+sudo chown hduser:hadoop -R /usr/local/hadoop

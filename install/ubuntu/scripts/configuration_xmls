@@ -1,0 +1,7 @@
+
+echo "TODO hadoop-env.sh"
+echo "TODO core-site.xml"
+echo "TODO hdfs-site.xml"
+echo "TODO yarn-site.xml"
+
+sudo cp /usr/local/hadoop/etc/hadoop/mapred-site.xml{.template,}
