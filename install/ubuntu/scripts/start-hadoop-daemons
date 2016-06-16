@@ -1,2 +1,5 @@
 start-dfs.sh
 start-yarn.sh
+
+# Prevent ConnectRefused to port 10020
+mr-jobhistory-server.sh start historyserver
