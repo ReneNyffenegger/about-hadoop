@@ -1,0 +1,19 @@
+# Compiling
+
+export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+hadoop com.sun.tools.javac.Main WordCount.java
+jar cf WordCount.jar WordCount*.class
+
+# Creating two files in HDFS
+
+hadoop fs -mkdir -p tq84/WordCount-1/input
+echo "foo bar baz"  | hadoop fs -put - tq84/WordCount-1/input/one.txt
+echo "more baz etc" | hadoop fs -put - tq84/WordCount-1/input/two.txt
+
+# Running the application
+
+hadoop jar WordCount.jar WordCount tq84/WordCount-1/input tq84/WordCount-1/output 
+
+# Displaying result
+
+hadoop fs -cat tq84/WordCount-1/output/part-r-00000
