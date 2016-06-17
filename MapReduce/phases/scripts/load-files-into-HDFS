@@ -1,0 +1,3 @@
+hadoop fs -rm    -r               tq84/mapred/phases/input
+hadoop fs -mkdir -p               tq84/mapred/phases/input
+hadoop fs -put input-files/file-* tq84/mapred/phases/input
