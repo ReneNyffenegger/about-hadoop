@@ -1,0 +1,15 @@
+rm *.class *.jar
+
+# Compiling
+
+export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+hadoop com.sun.tools.javac.Main first.java
+jar cf first.jar first*.class
+
+# Run
+
+hadoop fs -rm -r                                   tq84/mapred/first/output
+hadoop jar first.jar first tq84/mapred/first/input tq84/mapred/first/output 
+
+# Show results
+hadoop fs -cat tq84/mapred/first/output/part-*

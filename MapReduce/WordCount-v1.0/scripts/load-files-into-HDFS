@@ -1,3 +1,0 @@
-hadoop fs -rm -r tq84/WordCount-1/input
-hadoop fs -mkdir -p tq84/WordCount-1/input
-hadoop fs -put input-files/*.txt tq84/WordCount-1/input

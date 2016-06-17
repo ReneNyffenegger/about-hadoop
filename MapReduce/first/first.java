@@ -19,8 +19,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class WordCount {
-
+public class first {
 
   public static class Mapper_ extends Mapper <
      //
@@ -149,7 +148,7 @@ public class WordCount {
     Job job = Job.getInstance(conf, "MapRed Introduction");
 
  // Specify the classes that will to the Map Reduce job:
-    job.setJarByClass  (WordCount.class);
+    job.setJarByClass  (first    .class);
     job.setMapperClass (Mapper_  .class);
     job.setReducerClass(Reducer_ .class);
 
