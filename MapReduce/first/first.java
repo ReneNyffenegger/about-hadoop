@@ -101,9 +101,9 @@ public class first {
      //
      // Types that are relevant for for the mapper:
         Text    , // Type of 1st (key) parameter of reduce(), corresponds
-	          // to type of mapper's out key.
+                  // to type of mapper's out key.
         Text    , // Type of which the reduce() method receives an
-	          // Iterable, corresponds to type of mappers out value.
+                  // Iterable, corresponds to type of mappers out value.
         Text    , // Type of 1st parameter of context.write()
         Text      // Type of 2nd parameter of context.write()
     > {
@@ -114,7 +114,7 @@ public class first {
     //  in this example, is a word)
     //
         Text                  key_in_word,
-	Iterable<Text>        values_in_file_names,
+        Iterable<Text>        values_in_file_names,
         Context               context
     ) throws IOException, InterruptedException {
 
@@ -171,4 +171,3 @@ public class first {
   }
 
 }
-
